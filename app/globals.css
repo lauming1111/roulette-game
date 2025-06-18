@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  @apply bg-gray-100 font-sans m-0 p-0 min-h-[100vh];
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
