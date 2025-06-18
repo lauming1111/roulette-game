@@ -186,13 +186,11 @@ const RouletteGame = () => {
 
   const checkWin = (winningSection: WheelSection) => {
     let totalPayout = 0;
-    let totalBet = 0;
 
     const updatedBetHistory = betHistory.reduce((acc, bet) => {
       if (bet.result === "Invalid bet") return [...acc, bet];
       const betNumber = betTypeToNumber[bet.type as keyof typeof betTypeToNumber];
       let resultDisplay = `-${bet.amount}`;
-      totalBet += bet.amount;
 
       if (winningSection.number === betNumber) {
         let payout = 0;
